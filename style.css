@@ -1,0 +1,669 @@
+/* ========================================
+   NR STORE - GLOBAL DESIGN SYSTEM
+   ======================================== */
+
+:root {
+    --primary: #4A3AFF;
+    --primary-dark: #3528D8;
+    --primary-light: #EEECFF;
+
+    --success: #20B26B;
+    --success-dark: #159457;
+
+    --white: #FFFFFF;
+    --background: #F7F7FC;
+    --card: #FFFFFF;
+
+    --text: #18181B;
+    --text-secondary: #71717A;
+    --text-light: #A1A1AA;
+
+    --border: #E7E7EF;
+
+    --radius-sm: 10px;
+    --radius-md: 16px;
+    --radius-lg: 22px;
+    --radius-xl: 28px;
+
+    --shadow-sm: 0 4px 12px rgba(30, 25, 80, 0.06);
+    --shadow-md: 0 10px 30px rgba(30, 25, 80, 0.10);
+    --shadow-lg: 0 18px 50px rgba(30, 25, 80, 0.14);
+}
+
+
+/* ========================================
+   RESET
+   ======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: var(--background);
+    color: var(--text);
+
+    line-height: 1.5;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* ========================================
+   APP CONTAINER
+   ======================================== */
+
+.app {
+    width: 100%;
+    max-width: 480px;
+    min-height: 100vh;
+
+    margin: auto;
+
+    background: var(--white);
+
+    position: relative;
+    overflow-x: hidden;
+}
+
+
+/* ========================================
+   PAGE
+   ======================================== */
+
+.page {
+    width: 100%;
+    min-height: 100vh;
+
+    padding: 20px;
+}
+
+
+/* ========================================
+   NR LOGO
+   ======================================== */
+
+.nr-logo {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--primary);
+    color: var(--white);
+
+    border-radius: 16px;
+
+    font-size: 20px;
+    font-weight: 800;
+
+    box-shadow: var(--shadow-md);
+}
+
+
+/* ========================================
+   TYPOGRAPHY
+   ======================================== */
+
+.title {
+    font-size: 26px;
+    font-weight: 800;
+
+    color: var(--text);
+}
+
+.subtitle {
+    font-size: 14px;
+
+    color: var(--text-secondary);
+}
+
+.section-title {
+    font-size: 19px;
+    font-weight: 750;
+}
+
+.small-text {
+    font-size: 12px;
+
+    color: var(--text-secondary);
+}
+
+
+/* ========================================
+   SEARCH BAR
+   ======================================== */
+
+.search-box {
+    width: 100%;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 16px;
+
+    background: #F5F5FA;
+
+    border: 1px solid transparent;
+
+    border-radius: var(--radius-md);
+
+    transition: 0.2s ease;
+}
+
+.search-box:focus-within {
+    background: var(--white);
+
+    border-color: var(--primary);
+
+    box-shadow:
+        0 0 0 3px rgba(74, 58, 255, 0.10);
+}
+
+.search-icon {
+    font-size: 19px;
+
+    margin-right: 10px;
+}
+
+.search-box input {
+    width: 100%;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: var(--text);
+
+    font-size: 14px;
+}
+
+.search-box input::placeholder {
+    color: var(--text-light);
+}
+
+
+/* ========================================
+   CARD
+   ======================================== */
+
+.card {
+    background: var(--card);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius-lg);
+
+    box-shadow: var(--shadow-sm);
+
+    padding: 16px;
+}
+
+
+/* ========================================
+   BUTTONS
+   ======================================== */
+
+.btn {
+    min-height: 46px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 20px;
+
+    border-radius: 14px;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    transition: 0.2s ease;
+}
+
+.btn-primary {
+    background: var(--primary);
+
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+}
+
+.btn-success {
+    background: var(--success);
+
+    color: var(--white);
+}
+
+.btn-success:hover {
+    background: var(--success-dark);
+}
+
+.btn-outline {
+    background: var(--white);
+
+    color: var(--primary);
+
+    border: 1px solid var(--primary);
+}
+
+
+/* ========================================
+   CATEGORY CHIPS
+   ======================================== */
+
+.category-list {
+    display: flex;
+
+    gap: 10px;
+
+    overflow-x: auto;
+
+    padding-bottom: 5px;
+
+    scrollbar-width: none;
+}
+
+.category-list::-webkit-scrollbar {
+    display: none;
+}
+
+.category-chip {
+    flex: 0 0 auto;
+
+    padding: 9px 16px;
+
+    border-radius: 50px;
+
+    background: var(--primary-light);
+
+    color: var(--primary);
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    border: 1px solid transparent;
+}
+
+.category-chip.active {
+    background: var(--primary);
+
+    color: var(--white);
+}
+
+
+/* ========================================
+   APP CARD
+   ======================================== */
+
+.app-card {
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius-lg);
+
+    padding: 14px;
+
+    box-shadow: var(--shadow-sm);
+
+    transition: 0.2s ease;
+}
+
+.app-card:hover {
+    transform: translateY(-2px);
+
+    box-shadow: var(--shadow-md);
+}
+
+.app-icon {
+    width: 58px;
+    height: 58px;
+
+    border-radius: 16px;
+
+    object-fit: cover;
+
+    background: var(--primary-light);
+}
+
+.app-name {
+    margin-top: 10px;
+
+    font-size: 14px;
+
+    font-weight: 750;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+.developer {
+    margin-top: 3px;
+
+    font-size: 11px;
+
+    color: var(--text-secondary);
+}
+
+.rating {
+    margin-top: 7px;
+
+    font-size: 11px;
+
+    color: #F59E0B;
+}
+
+
+/* ========================================
+   APP GRID
+   ======================================== */
+
+.app-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 12px;
+}
+
+
+/* ========================================
+   FEATURED BANNER
+   ======================================== */
+
+.featured {
+    min-height: 175px;
+
+    padding: 20px;
+
+    border-radius: var(--radius-xl);
+
+    background:
+        linear-gradient(
+            135deg,
+            #4A3AFF,
+            #7064FF
+        );
+
+    color: var(--white);
+
+    position: relative;
+
+    overflow: hidden;
+
+    box-shadow: var(--shadow-lg);
+}
+
+.featured::after {
+    content: "";
+
+    width: 180px;
+    height: 180px;
+
+    position: absolute;
+
+    right: -70px;
+    top: -70px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.featured-title {
+    font-size: 22px;
+
+    font-weight: 800;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+.featured-text {
+    margin-top: 7px;
+
+    max-width: 220px;
+
+    font-size: 13px;
+
+    opacity: 0.9;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+
+/* ========================================
+   BOTTOM NAVIGATION
+   ======================================== */
+
+.bottom-nav {
+    position: fixed;
+
+    left: 50%;
+    bottom: 0;
+
+    transform: translateX(-50%);
+
+    width: 100%;
+    max-width: 480px;
+
+    height: 72px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    background:
+        rgba(255, 255, 255, 0.96);
+
+    border-top: 1px solid var(--border);
+
+    box-shadow:
+        0 -5px 20px rgba(30, 25, 80, 0.06);
+
+    z-index: 100;
+}
+
+.nav-item {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 4px;
+
+    color: var(--text-secondary);
+
+    font-size: 10px;
+
+    font-weight: 600;
+}
+
+.nav-icon {
+    font-size: 20px;
+}
+
+.nav-item.active {
+    color: var(--primary);
+}
+
+
+/* ========================================
+   LOADING SPINNER
+   ======================================== */
+
+.spinner {
+    width: 30px;
+    height: 30px;
+
+    border: 3px solid #E5E2FF;
+
+    border-top-color: var(--primary);
+
+    border-radius: 50%;
+
+    animation:
+        spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* ========================================
+   UTILITY CLASSES
+   ======================================== */
+
+.flex {
+    display: flex;
+}
+
+.flex-center {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.space-between {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+}
+
+.gap-8 {
+    gap: 8px;
+}
+
+.gap-12 {
+    gap: 12px;
+}
+
+.gap-16 {
+    gap: 16px;
+}
+
+.mt-8 {
+    margin-top: 8px;
+}
+
+.mt-12 {
+    margin-top: 12px;
+}
+
+.mt-16 {
+    margin-top: 16px;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mt-24 {
+    margin-top: 24px;
+}
+
+.mb-8 {
+    margin-bottom: 8px;
+}
+
+.mb-12 {
+    margin-bottom: 12px;
+}
+
+.mb-16 {
+    margin-bottom: 16px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.mb-24 {
+    margin-bottom: 24px;
+}
+
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (min-width: 600px) {
+
+    body {
+        padding: 30px 0;
+    }
+
+    .app {
+        min-height: 850px;
+
+        border-radius: 28px;
+
+        box-shadow: var(--shadow-lg);
+    }
+
+    .bottom-nav {
+        bottom: 30px;
+
+        border-radius:
+            0 0 28px 28px;
+    }
+
+      }
