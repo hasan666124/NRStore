@@ -1,206 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#4A3AFF"
+    >
+
+    <meta
+        name="description"
+        content="NR Store - Discover, download and enjoy apps."
+    >
 
     <title>NR Store</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <!-- Main CSS -->
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
 
-        body {
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f7f6ff;
-            color: #222;
-        }
-
-        .splash {
-            width: 100%;
-            max-width: 480px;
-            min-height: 100vh;
-            padding: 30px 24px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            background: #ffffff;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .circle {
-            position: absolute;
-            border-radius: 50%;
-            background: #4a3aff;
-            opacity: 0.06;
-        }
-
-        .circle.one {
-            width: 260px;
-            height: 260px;
-            top: -100px;
-            right: -100px;
-        }
-
-        .circle.two {
-            width: 220px;
-            height: 220px;
-            bottom: -100px;
-            left: -90px;
-        }
-
-        .logo {
-            width: 110px;
-            height: 110px;
-            border-radius: 30px;
-            background: #4a3aff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 15px 35px rgba(74, 58, 255, 0.25);
-            margin-bottom: 24px;
-            position: relative;
-            z-index: 2;
-        }
-
-        .logo span {
-            color: white;
-            font-size: 38px;
-            font-weight: 800;
-            letter-spacing: -3px;
-        }
-
-        h1 {
-            font-size: 34px;
-            color: #4a3aff;
-            margin-bottom: 8px;
-            font-weight: 800;
-        }
-
-        .tagline {
-            font-size: 15px;
-            color: #777;
-            margin-bottom: 42px;
-        }
-
-        .features {
-            width: 100%;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 12px;
-            margin-bottom: 40px;
-        }
-
-        .feature {
-            padding: 16px 10px;
-            border: 1px solid #eeeeF5;
-            border-radius: 18px;
-            background: #fafaff;
-        }
-
-        .feature-icon {
-            font-size: 25px;
-            margin-bottom: 8px;
-        }
-
-        .feature-title {
-            font-size: 13px;
-            font-weight: 700;
-            color: #333;
-        }
-
-        .loading {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .spinner {
-            width: 28px;
-            height: 28px;
-            border: 3px solid #e4e2ff;
-            border-top-color: #4a3aff;
-            border-radius: 50%;
-            animation: spin 0.9s linear infinite;
-        }
-
-        .loading-text {
-            font-size: 13px;
-            color: #888;
-        }
-
-        @keyframes spin {
-            to {
-                transform: rotate(360deg);
-            }
-        }
-
-        @media (min-width: 600px) {
-            .splash {
-                min-height: 850px;
-                border-radius: 28px;
-                box-shadow: 0 20px 60px rgba(40, 30, 100, 0.12);
-            }
-        }
-    </style>
 </head>
+
 
 <body>
 
     <main class="splash">
 
+        <!-- Background Decorations -->
+
         <div class="circle one"></div>
+
         <div class="circle two"></div>
 
+
         <!-- NR Store Logo -->
+
         <div class="logo">
+
             <span>NR</span>
+
         </div>
 
+
         <!-- App Name -->
-        <h1>NR Store</h1>
+
+        <h1>
+            NR Store
+        </h1>
+
+
+        <!-- Tagline -->
 
         <p class="tagline">
             Apps Make Life Easier
         </p>
 
+
         <!-- Features -->
+
         <section class="features">
 
-            <div class="feature">
-                <div class="feature-icon">🛡️</div>
-                <div class="feature-title">Safe Downloads</div>
-            </div>
+
+            <!-- Feature 1 -->
 
             <div class="feature">
-                <div class="feature-icon">⚡</div>
-                <div class="feature-title">Fast Access</div>
+
+                <div class="feature-icon">
+                    🛡️
+                </div>
+
+                <div class="feature-title">
+                    Safe Downloads
+                </div>
+
             </div>
 
-            <div class="feature">
-                <div class="feature-icon">📱</div>
-                <div class="feature-title">Wide Collection</div>
-            </div>
+
+            <!-- Feature 2 -->
 
             <div class="feature">
-                <div class="feature-icon">✨</div>
-                <div class="feature-title">Better Experience</div>
+
+                <div class="feature-icon">
+                    ⚡
+                </div>
+
+                <div class="feature-title">
+                    Fast Access
+                </div>
+
+            </div>
+
+
+            <!-- Feature 3 -->
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    📱
+                </div>
+
+                <div class="feature-title">
+                    Wide Collection
+                </div>
+
+            </div>
+
+
+            <!-- Feature 4 -->
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    ✨
+                </div>
+
+                <div class="feature-title">
+                    Better Experience
+                </div>
+
             </div>
 
         </section>
 
+
         <!-- Loading -->
+
         <div class="loading">
 
             <div class="spinner"></div>
@@ -213,5 +146,26 @@
 
     </main>
 
+
+    <!-- Splash Navigation -->
+
+    <script>
+
+        /*
+         * NR Store Splash Screen
+         *
+         * After 2.5 seconds,
+         * open the main app.
+         */
+
+        setTimeout(function () {
+
+            window.location.href = "app.html";
+
+        }, 2500);
+
+    </script>
+
 </body>
-</html>
+
+    </html>
