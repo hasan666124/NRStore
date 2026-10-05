@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#4A3AFF">
+    <meta name="description" content="NR Store - Discover, download and enjoy apps.">
+
+    <title>NR Store - Home</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app-container">
+
+        <!-- =========================
+             HEADER
+        ========================== -->
+        <header class="top-header">
+
+            <div class="brand-area">
+                <div class="nr-logo">NR</div>
+
+                <div>
+                    <h2 class="brand-title">NR Store</h2>
+                    <p class="brand-subtitle">Apps Make Life Easier</p>
+                </div>
+            </div>
+
+            <div class="header-actions">
+                <button class="icon-button" aria-label="Notifications">
+                    🔔
+                </button>
+
+                <button class="icon-button" aria-label="Profile">
+                    👤
+                </button>
+            </div>
+
+        </header>
+
+
+        <!-- =========================
+             MAIN CONTENT
+        ========================== -->
+        <main class="page">
+
+            <!-- Welcome -->
+            <section class="welcome-section">
+
+                <p class="welcome-small">
+                    Welcome back 👋
+                </p>
+
+                <h1>
+                    Discover amazing apps
+                </h1>
+
+                <p class="welcome-text">
+                    Find useful, safe and exciting apps in one place.
+                </p>
+
+            </section>
+
+
+            <!-- =========================
+                 SEARCH
+            ========================== -->
+            <section class="search-section">
+
+                <div class="search-box">
+
+                    <span class="search-icon">
+                        🔍
+                    </span>
+
+                    <input
+                        type="search"
+                        id="searchInput"
+                        placeholder="Search apps..."
+                        autocomplete="off"
+                    >
+
+                    <button
+                        class="search-clear"
+                        id="clearSearch"
+                        aria-label="Clear search"
+                    >
+                        ✕
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 FEATURED APP
+            ========================== -->
+            <section class="section">
+
+                <div class="section-header">
+
+                    <div>
+                        <p class="section-label">
+                            FEATURED
+                        </p>
+
+                        <h2>
+                            Featured App
+                        </h2>
+                    </div>
+
+                    <button class="text-button">
+                        See All
+                    </button>
+
+                </div>
+
+
+                <div class="featured-banner">
+
+                    <div class="featured-content">
+
+                        <div class="featured-icon">
+                            🚀
+                        </div>
+
+                        <div class="featured-info">
+
+                            <span class="featured-badge">
+                                Featured
+                            </span>
+
+                            <h3>
+                                NR Productivity
+                            </h3>
+
+                            <p>
+                                Organize your tasks and make your day easier.
+                            </p>
+
+                            <div class="featured-meta">
+                                ⭐ 4.8 &nbsp; • &nbsp; 10K+ Downloads
+                            </div>
+
+                            <button
+                                class="btn btn-success"
+                                onclick="downloadApp('NR Productivity')"
+                            >
+                                ⬇ Download
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 CATEGORIES
+            ========================== -->
+            <section class="section">
+
+                <div class="section-header">
+
+                    <div>
+                        <p class="section-label">
+                            EXPLORE
+                        </p>
+
+                        <h2>
+                            Categories
+                        </h2>
+                    </div>
+
+                    <button
+                        class="text-button"
+                        onclick="openCategories()"
+                    >
+                        See All
+                    </button>
+
+                </div>
+
+
+                <div class="category-list">
+
+                    <button class="category-chip active">
+                        <span>🔥</span>
+                        Popular
+                    </button>
+
+                    <button class="category-chip">
+                        <span>🎮</span>
+                        Games
+                    </button>
+
+                    <button class="category-chip">
+                        <span>🛠️</span>
+                        Tools
+                    </button>
+
+                    <button class="category-chip">
+                        <span>📚</span>
+                        Education
+                    </button>
+
+                    <button class="category-chip">
+                        <span>🛡️</span>
+                        Safety
+                    </button>
+
+                    <button class="category-chip">
+                        <span>🎬</span>
+                        Entertainment
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 POPULAR APPS
+            ========================== -->
+            <section class="section">
+
+                <div class="section-header">
+
+                    <div>
+                        <p class="section-label">
+                            TRENDING NOW
+                        </p>
+
+                        <h2>
+                            Popular Apps
+                        </h2>
+                    </div>
+
+                    <button class="text-button">
+                        See All
+                    </button>
+
+                </div>
+
+
+                <div class="app-grid" id="appGrid">
+
+
+                    <!-- APP 1 -->
+                    <article
+                        class="app-card"
+                        data-name="NR Browser"
+                        data-category="Tools"
+                    >
+
+                        <div class="app-icon">
+                            🌐
+                        </div>
+
+                        <div class="app-info">
+
+                            <h3>
+                                NR Browser
+                            </h3>
+
+                            <p class="developer">
+                                NR Labs
+                            </p>
+
+                            <div class="app-rating">
+                                ⭐ 4.7
+                            </div>
+
+                            <p class="download-count">
+                                25K+ downloads
+                            </p>
+
+                        </div>
+
+                        <button
+                            class="small-download"
+                            onclick="downloadApp('NR Browser')"
+                        >
+                            Download
+                        </button>
+
+                    </article>
+
+
+                    <!-- APP 2 -->
+                    <article
+                        class="app-card"
+                        data-name="NR Music"
+                        data-category="Entertainment"
+                    >
+
+                        <div class="app-icon">
+                            🎵
+                        </div>
+
+                        <div class="app-info">
+
+                            <h3>
+                                NR Music
+                            </h3>
+
+                            <p class="developer">
+                                NR Studio
+                            </p>
+
+                            <div class="app-rating">
+                                ⭐ 4.6
+                            </div>
+
+                            <p class="download-count">
+                                18K+ downloads
+                            </p>
+
+                        </div>
+
+                        <button
+                            class="small-download"
+                            onclick="downloadApp('NR Music')"
+                        >
+                            Download
+                        </button>
+
+                    </article>
+
+
+                    <!-- APP 3 -->
+                    <article
+                        class="app-card"
+                        data-name="NR Notes"
+                        data-category="Tools"
+                    >
+
+                        <div class="app-icon">
+                            📝
+                        </div>
+
+                        <div class="app-info">
+
+                            <h3>
+                                NR Notes
+                            </h3>
+
+                            <p class="developer">
+                                NR Labs
+                            </p>
+
+                            <div class="app-rating">
+                                ⭐ 4.9
+                            </div>
+
+                            <p class="download-count">
+                                15K+ downloads
+                            </p>
+
+                        </div>
+
+                        <button
+                            class="small-download"
+                            onclick="downloadApp('NR Notes')"
+                        >
+                            Download
+                        </button>
+
+                    </article>
+
+
+                    <!-- APP 4 -->
+                    <article
+                        class="app-card"
+                        data-name="NR Study"
+                        data-category="Education"
+                    >
+
+                        <div class="app-icon">
+                            📚
+                        </div>
+
+                        <div class="app-info">
+
+                            <h3>
+                                NR Study
+                            </h3>
+
+                            <p class="developer">
+                                NR Education
+                            </p>
+
+                            <div class="app-rating">
+                                ⭐ 4.8
+                            </div>
+
+                            <p class="download-count">
+                                12K+ downloads
+                            </p>
+
+                        </div>
+
+                        <button
+                            class="small-download"
+                            onclick="downloadApp('NR Study')"
+                        >
+                            Download
+                        </button>
+
+                    </article>
+
+
+                    <!-- APP 5 -->
+                    <article
+                        class="app-card"
+                        data-name="NR Games"
+                        data-category="Games"
+                    >
+
+                        <div class="app-icon">
+                            🎮
+                        </div>
+
+                        <div class="app-info">
+
+                            <h3>
+                                NR Games
+                            </h3>
+
+                            <p class="developer">
+                                NR Gaming
+                            </p>
+
+                            <div class="app-rating">
+                                ⭐ 4.5
+                            </div>
+
+                            <p class="download-count">
+                                30K+ downloads
+                            </p>
+
+                        </div>
+
+                        <button
+                            class="small-download"
+                            onclick="downloadApp('NR Games')"
+                        >
+                            Download
+                        </button>
+
+                    </article>
+
+
+                    <!-- APP 6 -->
+                    <article
+                        class="app-card"
+                        data-name="NR Safe"
+                        data-category="Safety"
+                    >
+
+                        <div class="app-icon">
+                            🛡️
+                        </div>
+
+                        <div class="app-info">
+
+                            <h3>
+                                NR Safe
+                            </h3>
+
+                            <p class="developer">
+                                NR Security
+                            </p>
+
+                            <div class="app-rating">
+                                ⭐ 4.9
+                            </div>
+
+                            <p class="download-count">
+                                9K+ downloads
+                            </p>
+
+                        </div>
+
+                        <button
+                            class="small-download"
+                            onclick="downloadApp('NR Safe')"
+                        >
+                            Download
+                        </button>
+
+                    </article>
+
+                </div>
+
+
+                <!-- No Search Result -->
+                <div
+                    id="noResults"
+                    class="empty-state"
+                    style="display: none;"
+                >
+
+                    <div class="empty-icon">
+                        🔍
+                    </div>
+
+                    <h3>
+                        No apps found
+                    </h3>
+
+                    <p>
+                        Try searching with another app name.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 TOP RATED
+            ========================== -->
+            <section class="section">
+
+                <div class="section-header">
+
+                    <div>
+                        <p class="section-label">
+                            BEST OF THE BEST
+                        </p>
+
+                        <h2>
+                            Top Rated
+                        </h2>
+                    </div>
+
+                    <button class="text-button">
+                        See All
+                    </button>
+
+                </div>
+
+
+                <div class="top-rated-list">
+
+                    <div class="top-rated-item">
+
+                        <div class="rank">
+                            1
+                        </div>
+
+                        <div class="top-rated-icon">
+                            🚀
+                        </div>
+
+                        <div class="top-rated-info">
+
+                            <h3>
+                                NR Productivity
+                            </h3>
+
+                            <p>
+                                ⭐ 4.9 • 50K+ downloads
+                            </p>
+
+                        </div>
+
+                        <button
+                            class="install-button"
+                            onclick="downloadApp('NR Productivity')"
+                        >
+                            Install
+                        </button>
+
+                    </div>
+
+
+                    <div class="top-rated-item">
+
+                        <div class="rank">
+                            2
+                        </div>
+
+                        <div class="top-rated-icon">
+                            📝
+                        </div>
+
+                        <div class="top-rated-info">
+
+                            <h3>
+                                NR Notes
+                            </h3>
+
+                            <p>
+                                ⭐ 4.9 • 15K+ downloads
+                            </p>
+
+                        </div>
+
+                        <button
+                            class="install-button"
+                            onclick="downloadApp('NR Notes')"
+                        >
+                            Install
+                        </button>
+
+                    </div>
+
+
+                    <div class="top-rated-item">
+
+                        <div class="rank">
+                            3
+                        </div>
+
+                        <div class="top-rated-icon">
+                            🛡️
+                        </div>
+
+                        <div class="top-rated-info">
+
+                            <h3>
+                                NR Safe
+                            </h3>
+
+                            <p>
+                                ⭐ 4.9 • 9K+ downloads
+                            </p>
+
+                        </div>
+
+                        <button
+                            class="install-button"
+                            onclick="downloadApp('NR Safe')"
+                        >
+                            Install
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 STORE INFO
+            ========================== -->
+            <section class="store-info-card">
+
+                <div class="store-info-icon">
+                    🛡️
+                </div>
+
+                <div>
+
+                    <h3>
+                        Safe & Authorized Apps
+                    </h3>
+
+                    <p>
+                        NR Store is designed for discovering
+                        authorized Android applications.
+                    </p>
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <!-- =========================
+             BOTTOM NAVIGATION
+        ========================== -->
+        <nav class="bottom-nav">
+
+            <a
+                href="app.html"
+                class="nav-item active"
+            >
+                <span class="nav-icon">🏠</span>
+                <span>Home</span>
+            </a>
+
+
+            <a
+                href="categories.html"
+                class="nav-item"
+            >
+                <span class="nav-icon">📂</span>
+                <span>Categories</span>
+            </a>
+
+
+            <a
+                href="downloads.html"
+                class="nav-item"
+            >
+                <span class="nav-icon">⬇️</span>
+                <span>Downloads</span>
+            </a>
+
+
+            <a
+                href="profile.html"
+                class="nav-item"
+            >
+                <span class="nav-icon">👤</span>
+                <span>Profile</span>
+            </a>
+
+        </nav>
+
+    </div>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+    <script>
+
+        // --------------------------------
+        // SEARCH
+        // --------------------------------
+
+        const searchInput =
+            document.getElementById("searchInput");
+
+        const clearSearch =
+            document.getElementById("clearSearch");
+
+        const appCards =
+            document.querySelectorAll(".app-card");
+
+        const noResults =
+            document.getElementById("noResults");
+
+
+        searchInput.addEventListener("input", function () {
+
+            const searchValue =
+                searchInput.value
+                    .toLowerCase()
+                    .trim();
+
+            let found = false;
+
+
+            appCards.forEach(function (card) {
+
+                const appName =
+                    card.dataset.name.toLowerCase();
+
+                const category =
+                    card.dataset.category.toLowerCase();
+
+
+                if (
+                    appName.includes(searchValue) ||
+                    category.includes(searchValue)
+                ) {
+
+                    card.style.display = "";
+
+                    found = true;
+
+                } else {
+
+                    card.style.display = "none";
+
+                }
+
+            });
+
+
+            if (searchValue === "") {
+
+                appCards.forEach(function (card) {
+                    card.style.display = "";
+                });
+
+                noResults.style.display = "none";
+
+            } else if (!found) {
+
+                noResults.style.display = "block";
+
+            } else {
+
+                noResults.style.display = "none";
+
+            }
+
+        });
+
+
+        // --------------------------------
+        // CLEAR SEARCH
+        // --------------------------------
+
+        clearSearch.addEventListener("click", function () {
+
+            searchInput.value = "";
+
+            appCards.forEach(function (card) {
+                card.style.display = "";
+            });
+
+            noResults.style.display = "none";
+
+            searchInput.focus();
+
+        });
+
+
+        // --------------------------------
+        // CATEGORY BUTTONS
+        // --------------------------------
+
+        const categoryButtons =
+            document.querySelectorAll(".category-chip");
+
+
+        categoryButtons.forEach(function (button) {
+
+            button.addEventListener("click", function () {
+
+                categoryButtons.forEach(function (item) {
+                    item.classList.remove("active");
+                });
+
+                button.classList.add("active");
+
+                const categoryText =
+                    button.textContent
+                        .trim()
+                        .toLowerCase();
+
+
+                if (categoryText === "popular") {
+
+                    appCards.forEach(function (card) {
+                        card.style.display = "";
+                    });
+
+                    noResults.style.display = "none";
+
+                    return;
+                }
+
+
+                let found = false;
+
+
+                appCards.forEach(function (card) {
+
+                    const cardCategory =
+                        card.dataset.category.toLowerCase();
+
+
+                    if (
+                        cardCategory === categoryText
+                    ) {
+
+                        card.style.display = "";
+
+                        found = true;
+
+                    } else {
+
+                        card.style.display = "none";
+
+                    }
+
+                });
+
+
+                if (!found) {
+                    noResults.style.display = "block";
+                } else {
+                    noResults.style.display = "none";
+                }
+
+            });
+
+        });
+
+
+        // --------------------------------
+        // DOWNLOAD FUNCTION
+        // --------------------------------
+
+        function downloadApp(appName) {
+
+            alert(
+                appName +
+                " download will be connected to the APK system later."
+            );
+
+        }
+
+
+        // --------------------------------
+        // CATEGORIES
+        // --------------------------------
+
+        function openCategories() {
+
+            window.location.href =
+                "categories.html";
+
+        }
+
+    </script>
+
+</body>
+</html>
